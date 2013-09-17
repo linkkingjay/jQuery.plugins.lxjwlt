@@ -594,6 +594,22 @@
 					});
 				}
 			});
+		},
+		// ‘自定义的按钮’模拟‘文件上传input’功能
+		bindFileButton: function(options){
+			var o = $.extend({
+				fileButton: this.siblings('input:file').eq(0),
+				textArea: this.siblings('input:text').eq(0)
+			}, options);
+			var $me = this,
+				$fileButton = o.fileButton,
+				$textArea = o.textArea;
+			$me.on('click', function(){
+				$fileButton.trigger('click');
+			});
+			$fileButton.on('change', function(){
+				$textArea.val($(this).val());
+			});
 		}
 	});
 	$.extend({

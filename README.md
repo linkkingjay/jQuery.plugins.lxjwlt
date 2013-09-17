@@ -11,4 +11,4 @@
 * `createWindow`：模拟弹出窗
 * `draggable`：添加拖拽效果
 * `createScroll`：创建自定义滚动条
-
+* `bindFileButton`: ‘自定义的按钮’模拟‘文件上传input’功能
