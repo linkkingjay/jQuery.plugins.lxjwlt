@@ -12,3 +12,4 @@
 * `draggable`：添加拖拽效果
 * `createScroll`：创建自定义滚动条
 * `bindFileButton`: ‘自定义的按钮’模拟‘文件上传input’功能
+* `validate`：表单验证框架
