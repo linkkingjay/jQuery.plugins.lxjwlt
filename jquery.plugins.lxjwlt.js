@@ -694,7 +694,7 @@
 							var $this = $(this),
 								validation = $this.data('_validation_'),
 								formValidation = $me.data('_validation_'),
-								index = formValidation.idBox.indexOf(validation.id),
+								index = $.indexOf(formValidation.idBox, validation.id),
 								match = ( (new RegExp(validation.reg)).test($this.val()) === validation.expect );
 
 							// 检查正则表达式的结果是否与期望的值相匹配
@@ -814,6 +814,27 @@
 			window.getSelection().removeAllRanges();
 		} : function(){
 			document.selection.empty();
+		},
+		indexOf: function(array, value, fromIndex){
+			if (!array instanceof Array){
+				return;
+			}
+			var index;
+			fromIndex = fromIndex || 0;
+			if (Array.prototype.indexOf){
+				index = array.indexOf(value, fromIndex);
+			} else {
+				for (var i = fromIndex, len = array.length; i < len; i++) {
+					if (array[i] === value) { 
+						index = i;
+						break; 
+					}
+				}
+				if(index === undefined){
+					index = -1;
+				}
+			}
+			return index;
 		}
 	});
 })(jQuery);
