@@ -619,49 +619,30 @@
 				defaults = {
 					isEmpty : {
 						reg : /^\s*$/,
-						target : null,
 						expect : true,
 						info : 'It should not be empty!',
-						on : 'change',
-						succeed : null,
-						fail : null,
-						always : null
+						on : 'change'
 					},
 					isEmail : {
 						reg : /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/,
-						target : null,
 						expect : true,
 						info : 'It is not a Email address!',
-						on : 'change',
-						succeed : null,
-						fail : null,
-						always : null
+						on : 'change'
 					},
 					isNum : {
 						reg : /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/,
-						target : null,
 						expect : true,
 						info : 'It is not a number!',
-						on : 'change',
-						succeed : null,
-						fail : null,
-						always : null
+						on : 'change'
 					},
 					isInt : {
 						reg : /^\d+$/,
-						target : null,
 						expect : true,
 						info : 'It is not a integer!',
-						on : 'change',
-						succeed : null,
-						fail : null,
-						always : null
+						on : 'change'
 					},
 					submit : {
-						on : 'click',
-						succeed : null,
-						fail : null,
-						always : null
+						on : 'click'
 					}
 				};
 			// 合并默认选项defaults和参数options以及用户自定义默认选项setup
@@ -670,7 +651,10 @@
 					prop = '',
 					setup = $.fn.validate.setup;
 				for (prop in options) {
-					obj[prop] = {};
+					obj[prop] = {
+						expect : true,
+						on : 'change'
+					};
 					$.extend(obj[prop], defaults[prop], $.fn.validate.setup, options[prop]);
 				}
 				return obj;
