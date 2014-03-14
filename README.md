@@ -1,6 +1,6 @@
 #jQuery.plugins.lxjwlt
 
-将各种实用函数写成了jQuery插件的形式，以便日后重用。
+将各种实用函数写成了 jQuery 插件的形式，以便日后重用。
 
 ##主要功能
 
@@ -13,3 +13,6 @@
 * `createScroll`：创建自定义滚动条
 * `bindFileButton`: ‘自定义的按钮’模拟‘文件上传input’功能
 * `validate`：表单验证框架
+
+## Demos
+- [bindDropDownList](http://linkkingjay.github.io/jQuery.plugins.lxjwlt/tests/bindDropDownList.html)
