@@ -1,0 +1,11 @@
+#container {
+    background-image: -webkit-linear-gradient(top, darkblue, seagreen);
+    margin: 0 auto;
+    width: 960px;
+    height: 1200px;
+}
+#goTop {
+    position: fixed;
+    bottom: 100px;
+    left: 1160px;
+}
